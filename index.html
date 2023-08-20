@@ -3,7 +3,259 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>喜东茶预定</title>
+    <!-- 引入CSS样式 -->
+    <link rel="stylesheet" href="./index.css" />
   </head>
-  <body></body>
+  <body>
+    <div>
+      <!-- 顶部内容 -->
+      <div class="top">
+        <div class="top-content">
+          <div class="top-img">
+            <img src="./img/mt1.jpeg" alt="" />
+            <img src="./img/mt2.jpeg" alt="" />
+            <img src="./img/mt3.jpeg" alt="" />
+            <img src="./img/mt4.jpeg" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- 主体内容 -->
+      <div class="box-content">
+        <form class="order-form" method="post" action="">
+          <!-- 奶茶口味 -->
+          <div class="form-item">
+            <legend class="form-item-label" for="type">奶茶口味：</legend>
+            <div class="form-item-control type-radios">
+              <div class="radio-item">
+                <input
+                  type="radio"
+                  name="type"
+                  id="芋泥波波"
+                  value="芋泥波波"
+                  checked
+                />
+                <label class="radio-item-label" for="芋泥波波">芋泥波波</label>
+              </div>
+              <div class="radio-item">
+                <input
+                  type="radio"
+                  name="type"
+                  id="芝芝桃桃"
+                  value="芝芝桃桃"
+                />
+                <label class="radio-item-label" for="芝芝桃桃">芝芝桃桃</label>
+              </div>
+              <div class="radio-item">
+                <input
+                  type="radio"
+                  name="type"
+                  id="多肉葡萄"
+                  value="多肉葡萄"
+                />
+                <label class="radio-item-label" for="多肉葡萄">多肉葡萄</label>
+              </div>
+            </div>
+          </div>
+          <!-- 几杯 -->
+          <div class="form-item">
+            <legend class="form-item-label" for="num">几杯：</legend>
+            <input type="number" name="num" id="num" required />
+          </div>
+          <!-- 杯型 -->
+          <div class="form-item">
+            <legend class="form-item-label" for="size">杯型：</legend>
+            <div class="form-item-control">
+              <div class="radio-item">
+                <input
+                  type="radio"
+                  name="size"
+                  id="超大杯"
+                  value="超大杯"
+                  checked
+                />
+                <label class="radio-item-label" for="超大杯">超大杯</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="size" id="大杯" value="大杯" />
+                <label class="radio-item-label" for="大杯">大杯</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="size" id="中杯" value="中杯" />
+                <label class="radio-item-label" for="中杯">中杯</label>
+              </div>
+            </div>
+          </div>
+          <!-- 甜度 -->
+          <div class="form-item">
+            <legend class="form-item-label" for="type">甜度：</legend>
+            <div class="form-item-control">
+              <select name="sugar" id="">
+                <option value="无糖" selected>无糖</option>
+                <option value="三分糖">三分糖</option>
+                <option value="五分糖">五分糖</option>
+                <option value="全糖">全糖</option>
+              </select>
+            </div>
+          </div>
+          <!-- 免费小料： -->
+          <div class="form-item">
+            <legend class="form-item-label" for="snack">免费小料：</legend>
+            <div class="form-item-control">
+              <div class="checkbox-item">
+                <input type="checkbox" name="snack" id="波霸" value="波霸" />
+                <label class="checkbox-item-label" for="波霸">波霸</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="snack" id="椰果" value="椰果" />
+                <label class="checkbox-item-label" for="椰果">椰果</label>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  name="snack"
+                  id="西米露"
+                  value="西米露"
+                />
+                <label class="checkbox-item-label" for="西米露">西米露</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="snack" id="茶冻" value="茶冻" />
+                <label class="checkbox-item-label" for="茶冻">茶冻</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="snack" id="红豆" value="红豆" />
+                <label class="checkbox-item-label" for="红豆">红豆</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="snack" id="仙草" value="仙草" />
+                <label class="checkbox-item-label" for="仙草">仙草</label>
+              </div>
+            </div>
+          </div>
+          <!-- 加价小料 -->
+          <div class="form-item">
+            <legend class="form-item-label" for="sugarprize">加价小料：</legend>
+            <div class="form-item-control">
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  name="sugarprize"
+                  id="冰淇淋（￥4）"
+                  value="冰淇淋（￥4）"
+                />
+                <label class="checkbox-item-label" for="冰淇淋（￥4）"
+                  >冰淇淋（￥4）</label
+                >
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  name="sugarprize"
+                  id="布丁（￥3）"
+                  value="布丁（￥3）"
+                />
+                <label class="checkbox-item-label" for="布丁（￥3）"
+                  >布丁（￥3）</label
+                >
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  name="sugarprize"
+                  id="奶霜（￥2）"
+                  value="奶霜（￥2）"
+                />
+                <label class="checkbox-item-label" for="奶霜（￥2）"
+                  >奶霜（￥2）</label
+                >
+              </div>
+            </div>
+          </div>
+          <!-- 是否加冰 -->
+          <div class="form-item">
+            <legend class="form-item-label" for="ice">是否加冰：</legend>
+            <div class="form-item-control">
+              <div class="radio-item">
+                <input type="radio" name="ice" id="是" value="是" checked />
+                <label class="radio-item-label" for="是">是</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="ice" id="否" value="否" />
+                <label class="radio-item-label" for="否">否</label>
+              </div>
+            </div>
+          </div>
+          <!-- 是否去茶底 -->
+          <div class="form-item">
+            <legend class="form-item-label" for="tea">是否去茶底：</legend>
+            <div class="form-item-control">
+              <div class="radio-item">
+                <input type="radio" name="tea" id="是" value="是" checked />
+                <label class="radio-item-label" for="是">是</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="tea" id="否" value="否" />
+                <label class="radio-item-label" for="否">否</label>
+              </div>
+            </div>
+          </div>
+          <!-- 你的地址 -->
+          <div class="form-item">
+            <legend class="form-item-label" for="num">你的地址：</legend>
+            <div class="form-item-control">
+              <textarea name="address" rows="6" required></textarea>
+            </div>
+          </div>
+          <!-- 手机号 -->
+          <div class="form-item">
+            <legend class="form-item-label" for="num">你的手机号：</legend>
+            <div class="form-item-control">
+              <input type="tel" name="phone" required />
+            </div>
+          </div>
+          <!--   期待送达时间 -->
+          <div class="form-item">
+            <legend class="form-item-label" for="num">期待送达时间：</legend>
+            <div class="form-item-control">
+              <input type="time" name="time" required />
+            </div>
+          </div>
+          <!-- 备注 -->
+          <div class="form-item">
+            <legend class="form-item-label" for="num">备注：</legend>
+            <div class="form-item-control">
+              <textarea name="other" rows="6"></textarea>
+            </div>
+          </div>
+          <!-- 支付方式 -->
+          <div class="form-item">
+            <legend class="form-item-label" for="pay">支付方式：</legend>
+            <div class="form-item-control">
+              <div class="radio-item">
+                <input
+                  type="radio"
+                  name="pay"
+                  id="微信支付"
+                  value="微信支付"
+                  checked
+                />
+                <label class="radio-item-label" for="微信支付">微信支付</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="pay" id="支付宝" value="支付宝" />
+                <label class="radio-item-label" for="支付宝">支付宝</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-item button">
+            <button class="btn submit" type="submit">提交</button>
+            <button class="btn reset" type="reset">重置</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="scroll-top">回到顶部</div>
+  </body>
+  <script src="./index.js"></script>
 </html>

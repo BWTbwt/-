@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+}
+.top {
+  /* width: 100%; */
+  padding: 16px;
+  background-color: #434343;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top .top-content {
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.top .top-content .top-img {
+  display: flex;
+  /* 具体解释如下：
+     flex-grow 属性接受一个数字作为值，表示元素的增长比例。默认值为 0。
+     当弹性容器的空间超过所有弹性元素所需的空间时，剩余空间将按照各个元素的 flex-grow 属性值进行分配。
+     如果一个元素的 flex-grow 属性为 0，则它不会分配剩余空间，保持其初始尺寸。
+     如果多个元素的 flex-grow 属性都为 1，则它们将平均分配剩余空间，使它们的尺寸相等。
+     如果一个元素的 flex-grow 属性为 2，而其他元素的 flex-grow 属性为 1，则前者将分配的空间是后者的两倍。
+     简而言之，flex-grow 属性控制弹性元素在弹性容器中的增长比例。将其设置为 1 表示元素将根据可用空间进行扩展，并且将相对于其他具有较低 flex-grow 值的元素分配更多的空间。
+  */
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.top .top-content img {
+  width: 0px;
+  /*  flex-basis: 20%; 将弹性元素的初始尺寸设置为父容器的 20%。
+      当弹性容器的空间超过所有弹性元素所需的空间时，剩余空间将根据各个元素的 flex-grow 属性进行分配。
+      如果弹性容器的空间不足以容纳所有弹性元素，则元素可能会根据其 flex-shrink 属性进行收缩，以适应可用空间。
+      简而言之，flex-basis 属性定义了弹性元素在弹性容器中的初始大小。在这种情况下，它将元素的初始宽度设置为父容器宽度的 20%。 
+  */
+  flex-basis: 20%;
+  border-radius: 12px;
+  /* 用于指定鼠标悬停在元素上时的鼠标指针样式。 */
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.top .top-content .top-img img:hover {
+  transform: rotate(20deg);
+}
+
+/* 主体表单内容 */
+.box-content {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0px;
+  /* padding-bottom: 20px; */
+}
+/* .box-content .order-form {
+  width: auto;
+} */
+.box-content .order-form .form-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.box-content .order-form .form-item .form-item-label {
+  margin-right: 16px;
+  flex-basis: 30%;
+  text-align: right;
+  flex-shrink: 0;
+}
+/* .box-content .order-form .form-item .form-item-label::after {
+  content: ':';
+} */
+.box-content .order-form .form-item .form-item-control {
+  display: flex;
+  /* flex-wrap: 决定容器内项目是否可换行
+    默认值：nowrap 不换行，即当主轴尺寸固定时，当空间不足时，项目尺寸会随之调整而并不会挤到下一行
+    wrap：项目主轴总尺寸超出容器时换行，第一行在上方
+    wrap-reverse：换行，第一行在下方
+  */
+  flex-wrap: wrap;
+}
+.type-radios {
+  display: flex;
+}
+.radio-item {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+.radio-item .radio-item-label {
+  padding: 0px 8px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+.checkbox-item .checkbox-item-label {
+  padding: 0px 8px;
+}
+
+.button {
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.button .btn {
+  height: 32px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin-right: 12px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.button .btn.submit {
+  background-color: #1677ff;
+  color: #fff;
+}
+.scroll-top {
+  position: fixed;
+  right: 12px;
+  bottom: 14px;
+  width: 35px;
+  height: 35px;
+  padding-left: 4px;
+  border: 1px solid #595959;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #595959;
+  cursor: pointer;
+}
