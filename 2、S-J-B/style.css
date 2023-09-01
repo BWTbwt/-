@@ -1,0 +1,107 @@
+body {
+  background-color: pink;
+}
+
+.btn {
+  height: 32px;
+  color: white;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  outline: none;
+  padding: 4px 15px;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 64px;
+}
+#main .game {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+}
+
+#main .game .player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#main .game .gesture {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main .game .gesture .pending {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+#main .game .player .name {
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 14px;
+}
+#main .game .player .score {
+  font-weight: 400;
+}
+
+#start-this-round-btn {
+  background-color: #222;
+}
+.start-this-round {
+  margin-top: 25px;
+}
+
+#select-dialog {
+  width: 300px;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+#select-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+#select-dialog .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#select-dialog .row select {
+  border-radius: 3px;
+  padding: 4px 12px;
+}
+
+#select-dialog .row:first-child {
+  margin-bottom: 16px;
+}
+
+#submit-select {
+  background-color: skyblue;
+}
+
+.result-of-this-round {
+  margin-top: 32px;
+  font-weight: 400;
+}
+.result-of-final {
+  margin-top: 66px;
+  font-size: 20px;
+  font-weight: 600;
+}
+#main .round {
+  font-size: 32px;
+  color: #222;
+  font-weight: 500;
+}
