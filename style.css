@@ -1,107 +1,64 @@
+html,
 body {
-  background-color: pink;
+  height: 100%;
 }
 
-.btn {
-  height: 32px;
-  color: white;
-  border-radius: 6px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  outline: none;
-  padding: 4px 15px;
-}
-
-#main {
+.main {
   display: flex;
+  height: 100%;
+  background-color: #e2dfdf;
   flex-direction: column;
-  align-items: center;
-  margin-top: 64px;
-}
-#main .game {
-  width: 70%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 100px;
 }
 
-#main .game .player {
+.main .box {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-basis: 120px;
 }
 
-#main .game .gesture {
-  width: 200px;
-  height: 200px;
+.main .control-inner {
+  display: flex;
+  width: 800px;
+}
+.main .control-inner .item {
+  flex-grow: 1;
+}
+
+.main .game {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+.main .game-map {
+  width: 800px;
+  height: 440px;
+  position: relative;
+  border: 2px solid #292929;
 }
 
-#main .game .gesture .pending {
-  font-size: 30px;
-  font-weight: 500;
+.main .game-map .car {
+  height: 28px;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
-#main .game .player .name {
-  font-size: 14px;
-  color: #222;
-  margin-bottom: 14px;
-}
-#main .game .player .score {
-  font-weight: 400;
+.main .game-map .car-up {
+  transform: rotate(-90deg);
 }
 
-#start-this-round-btn {
-  background-color: #222;
-}
-.start-this-round {
-  margin-top: 25px;
+.main .game-map .car-down {
+  transform: rotate(90deg);
 }
 
-#select-dialog {
-  width: 300px;
-  border-radius: 8px;
-  padding: 16px;
+.main .game-map .car-right {
+  transform: rotate(0deg);
 }
 
-#select-dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.45);
-}
-
-#select-dialog .row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#select-dialog .row select {
-  border-radius: 3px;
-  padding: 4px 12px;
-}
-
-#select-dialog .row:first-child {
-  margin-bottom: 16px;
-}
-
-#submit-select {
-  background-color: skyblue;
-}
-
-.result-of-this-round {
-  margin-top: 32px;
-  font-weight: 400;
-}
-.result-of-final {
-  margin-top: 66px;
-  font-size: 20px;
-  font-weight: 600;
-}
-#main .round {
-  font-size: 32px;
-  color: #222;
-  font-weight: 500;
+/* transform: scale(-1, 1) 是一个 CSS 变换函数，它通过指定的缩放因子来对元素进行缩放。在这个函数中，第一个参数 -1 表示在水平方向上进行翻转，第二个参数 1 表示在垂直方向上不进行缩放。 */
+.main .game-map .car-left {
+  transform: scale(-1, 1);
 }

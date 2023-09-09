@@ -8,46 +8,43 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div id="main">
-      <p class="round"></p>
-      <div class="game">
-        <div class="computer player">
-          <div class="gesture">
-            <span class="pending">?</span>
+    <div class="main">
+      <div class="box">
+        <div class="control-inner">
+          <div class="item">
+            <label>速度：</label>
+            <select style="width: 120px" name="speed" id="speed">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
           </div>
-          <p class="name">机器人</p>
-          <p class="score">胜利：0 ｜ 负：0</p>
-        </div>
-        <div class="my player">
-          <div class="gesture">
-            <span class="pending">?</span>
+          <div class="item">
+            <label>车型：</label>
+            <select style="width: 120px" name="carType" id="carType">
+              <option value="tractors">拖拉机</option>
+              <option value="truck">卡车</option>
+              <option value="motor">摩托车</option>
+              <option value="roadster">跑车</option>
+              <option value="electromobile">电动车</option>
+              <option value="bike">自行车</option>
+            </select>
           </div>
-          <p class="name">玩家</p>
-          <p class="score">胜利：0 ｜ 负：0</p>
         </div>
       </div>
-      <div class="result-of-this-round"></div>
-      <div class="result-of-final"></div>
-      <div class="start-this-round">
-        <button id="start-this-round-btn" class="btn">开始下一回合</button>
+      <div class="game">
+        <div class="game-map">
+          <img class="car" src="./image/car1.png" alt="" />
+        </div>
       </div>
     </div>
-
-    <dialog id="select-dialog">
-      <form id="select-form">
-        <p class="row one">
-          <label for="gesture">请选择要出的手势：</label>
-          <select id="gesture-select">
-            <option value="rock">石头</option>
-            <option value="scissor">剪刀</option>
-            <option value="paper">布</option>
-          </select>
-        </p>
-        <p class="row">
-          <button class="btn" id="submit-select">确定</button>
-        </p>
-      </form>
-    </dialog>
   </body>
   <script src="./index.js"></script>
 </html>
