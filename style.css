@@ -3,62 +3,72 @@ body {
   height: 100%;
 }
 
-.main {
-  display: flex;
+#main {
   height: 100%;
-  background-color: #e2dfdf;
-  flex-direction: column;
-}
-
-.main .box {
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(192, 192, 192);
+}
+
+#main .control {
+  width: 1000px;
   flex-basis: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.main .control-inner {
+#main .game {
   display: flex;
-  width: 800px;
-}
-.main .control-inner .item {
   flex-grow: 1;
-}
-
-.main .game {
-  display: flex;
   justify-content: center;
-  align-content: center;
-  flex-grow: 1;
-  flex-wrap: wrap;
+  align-items: center;
 }
-.main .game-map {
-  width: 800px;
-  height: 440px;
+
+#main .game .game-map {
   position: relative;
-  border: 2px solid #292929;
+  width: 1000px;
+  height: 90%;
+  border: 2px solid #fff;
 }
 
-.main .game-map .car {
-  height: 28px;
+#main .game .game-map .train-node {
   position: absolute;
-  left: 0;
-  right: 0;
+  width: 22px;
+  height: 22px;
+  background: #eee;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 6px;
+  border-top-left-radius: 2px;
 }
 
-.main .game-map .car-up {
-  transform: rotate(-90deg);
+#main .game .game-map .train-node .window-list {
+  position: absolute;
+  display: flex;
+  left: 2px;
+  right: 6px;
+  bottom: 8px;
 }
 
-.main .game-map .car-down {
-  transform: rotate(90deg);
+#main .game .game-map .train-node .window-list .window-item {
+  width: 4px;
+  height: 8px;
+  background-color: #9ebed1;
+  border: 1px solid #4b5f70;
+  border-radius: 2px;
 }
 
-.main .game-map .car-right {
-  transform: rotate(0deg);
+#main .game .game-map .train-node .window-list .window-item:last-child {
+  margin-left: 2px;
 }
 
-/* transform: scale(-1, 1) 是一个 CSS 变换函数，它通过指定的缩放因子来对元素进行缩放。在这个函数中，第一个参数 -1 表示在水平方向上进行翻转，第二个参数 1 表示在垂直方向上不进行缩放。 */
-.main .game-map .car-left {
-  transform: scale(-1, 1);
+#main .game .game-map .train-node .line {
+  position: absolute;
+  width: 16px;
+  height: 3px;
+  left: 1px;
+  bottom: 3px;
+  border-radius: 2px;
+  background-color: #4b5f70;
 }

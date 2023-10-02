@@ -1,0 +1,64 @@
+html,
+body {
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+  background-color: #e2dfdf;
+  flex-direction: column;
+}
+
+.main .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 120px;
+}
+
+.main .control-inner {
+  display: flex;
+  width: 800px;
+}
+.main .control-inner .item {
+  flex-grow: 1;
+}
+
+.main .game {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+.main .game-map {
+  width: 800px;
+  height: 440px;
+  position: relative;
+  border: 2px solid #292929;
+}
+
+.main .game-map .car {
+  height: 28px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.main .game-map .car-up {
+  transform: rotate(-90deg);
+}
+
+.main .game-map .car-down {
+  transform: rotate(90deg);
+}
+
+.main .game-map .car-right {
+  transform: rotate(0deg);
+}
+
+/* transform: scale(-1, 1) 是一个 CSS 变换函数，它通过指定的缩放因子来对元素进行缩放。在这个函数中，第一个参数 -1 表示在水平方向上进行翻转，第二个参数 1 表示在垂直方向上不进行缩放。 */
+.main .game-map .car-left {
+  transform: scale(-1, 1);
+}
