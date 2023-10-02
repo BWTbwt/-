@@ -72,3 +72,10 @@ body {
   border-radius: 2px;
   background-color: #4b5f70;
 }
+
+#main .game .game-map .two {
+  margin-left: 22px;
+}
+#main .game .game-map .three {
+  margin-left: 44px;
+}

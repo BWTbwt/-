@@ -11,10 +11,10 @@
     <div id="main">
       <div class="control">
         <div class="item">
-          <label for="playMusic">是否播放背景音乐：</label>
-          <select name="playMusic" id="playMusic" style="width: 100px">
-            <option value="">是</option>
-            <option value="">否</option>
+          <label for="playBgm">是否播放背景音乐：</label>
+          <select name="playBgm" id="playBgm" style="width: 100px">
+            <option value="y">是</option>
+            <option value="n">否</option>
           </select>
         </div>
         <div class="item">
@@ -33,7 +33,7 @@
             <div class="line"></div>
           </div>
           <!-- 车头2 -->
-          <div class="train-node">
+          <div class="train-node two">
             <ul class="window-list">
               <li class="window-item"></li>
               <li class="window-item"></li>
@@ -41,7 +41,7 @@
             <div class="line"></div>
           </div>
           <!-- 车头3 -->
-          <div class="train-node">
+          <div class="train-node three">
             <ul class="window-list">
               <li class="window-item"></li>
               <li class="window-item"></li>
@@ -51,6 +51,8 @@
         </div>
       </div>
     </div>
+    <!-- loop="true"：这个属性指定了音频是否循环播放。当设置为 true 时，音频会无限循环播放；当设置为 false 时，音频将只播放一次。 -->
+    <audio id="bgm" loop="true" src="./bgm.mp3"></audio>
   </body>
   <script src="./index.js"></script>
 </html>
